@@ -27,6 +27,18 @@
     outline-offset: 3px;
     border-radius: 6px;
   }
+
+  /* Hide default cursor on desktop when custom neural cursor is active */
+  @media (pointer: fine) {
+    body.custom-cursor-active,
+    body.custom-cursor-active a,
+    body.custom-cursor-active button,
+    body.custom-cursor-active input,
+    body.custom-cursor-active textarea,
+    body.custom-cursor-active [role="button"] {
+      cursor: none !important;
+    }
+  }
 }
 
 @layer components {

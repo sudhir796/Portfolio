@@ -8,10 +8,12 @@ import Education from './components/Education'
 import Projects from './components/Projects'
 import AchievementsProfiles from './components/AchievementsProfiles'
 import Footer from './components/Footer'
+import Cursor from './components/Cursor'
 
 export default function App() {
   return (
     <div className="bg-void text-text-primary min-h-screen selection:bg-cyan/30 selection:text-cyan overflow-x-hidden relative">
+      <Cursor />
       <Navbar />
       <main>
         <Hero />
