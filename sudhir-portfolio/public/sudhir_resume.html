@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudhir D - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #0d0f17;
+      color: #e2e8f0;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #121522;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+    .contact-info {
+      text-align: right;
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 1.75rem;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #38bdf8;
+      border-bottom: 1px solid #1e293b;
+      padding-bottom: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .item {
+      margin-bottom: 1.25rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 600;
+      color: #f8fafc;
+      font-size: 0.95rem;
+    }
+    .item-sub {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.25rem;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+    }
+    li {
+      margin-bottom: 0.35rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0.5rem 1rem;
+      font-size: 0.875rem;
+    }
+    .skills-label {
+      font-weight: 600;
+      color: #94a3b8;
+    }
+    .skills-val {
+      color: #f1f5f9;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+    }
+    .btn {
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #0369a1;
+    }
+    @media print {
+      body {
+        background: white;
+        color: black;
+        padding: 0;
+      }
+      .actions {
+        display: none;
+      }
+      .resume-container {
+        background: white;
+        color: black;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      .name, .item-header {
+        color: black;
+      }
+      .section-title {
+        color: #0284c7;
+        border-bottom-color: #cbd5e1;
+      }
+      .contact-info, .item-sub, ul, .skills-label {
+        color: #334155;
+      }
+      .skills-val {
+        color: #0f172a;
+      }
+      .contact-info a {
+        color: #0284c7;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions">
+    <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <h1 class="name">SUDHIR D</h1>
+        <p style="font-size: 0.9rem; color: #38bdf8; font-weight: 500; margin-top: 0.25rem;">AIML & Data Science Student | Applied AI Developer</p>
+      </div>
+      <div class="contact-info">
+        <p>Contact: 8807657733</p>
+        <p>E-mail: <a href="mailto:sudhir709006@gmail.com">sudhir709006@gmail.com</a> | <a href="mailto:sudhir.d2024cce@sece.ac.in">sudhir.d2024cce@sece.ac.in</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/sudhir-d-44ab69329/" target="_blank">LinkedIn</a> | 
+          <a href="https://github.com/sudhir796" target="_blank">GitHub</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Sri Eshwar College of Engineering — B.E (AIML / DS)</span>
+          <span>2024 – 2028</span>
+        </div>
+        <div class="item-sub">Score: <span class="badge">7.865 CGPA</span> (III rd-sem)</div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Sri Vidya Bharathi Matric Hr Sec School — HSC</span>
+          <span>2023 – 2024</span>
+        </div>
+        <div class="item-sub">Score: <span class="badge">92.83%</span></div>
+      </div>
+      <div class="item">
+        <div class="item-header">
+          <span>Sri Vidya Bharathi Matric Hr Sec School — SSLC</span>
+          <span>2021 – 2022</span>
+        </div>
+        <div class="item-sub">Score: <span class="badge">94%</span></div>
+      </div>
+    </div>
+
+    <!-- Internship Experiences -->
+    <div class="section">
+      <h2 class="section-title">Internship Experiences</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Aptitude Guru Pvt Ltd — Full-Stack Developer Intern (In-College)</span>
+          <span>2025</span>
+        </div>
+        <div class="item-sub">
+          Developed Eluria School of Excellence, a full-stack school management system using MongoDB, Express.js, React.js, and Node.js with role-based access for students, parents, staff, and admin. Implemented secure authentication, RESTful APIs, and a responsive user interface to manage academic and administrative operations.
+        </div>
+        <div class="item-sub" style="margin-top: 0.5rem;">
+          <strong>Skills Acquired:</strong> HTML, CSS, React, REST APIs, MongoDB Atlas, Node.js
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>AI Health Insurance Assistant (RAG-based System)</span>
+          <span>May 2025</span>
+        </div>
+        <div class="item-sub"><strong>Tech:</strong> Python, LLaMA 3, RAG, Docling, LiteLLM</div>
+        <ul>
+          <li>Built an AI assistant to answer health insurance policy queries using Retrieval-Augmented Generation (RAG).</li>
+          <li>Developed a PDF document processing pipeline for extracting and chunking policy data.</li>
+          <li>Integrated LLaMA 3 via OpenRouter to generate context-aware responses.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>CCTV Violence Detection System</span>
+          <span>November 2025</span>
+        </div>
+        <div class="item-sub"><strong>Tech:</strong> Python, CNN/LSTM, OpenCV</div>
+        <ul>
+          <li>Developing a violence detection system for CCTV surveillance using deep learning.</li>
+          <li>Prepared and preprocessed video datasets by filtering videos based on frame rate and removing black-and-white footage.</li>
+          <li>Extracting video frames and features for training CNN/LSTM models for violence classification.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>AI-Powered Study Tool — Chrome Extension</span>
+          <span>April 2026 (ONGOING)</span>
+        </div>
+        <div class="item-sub"><strong>Tech:</strong> FastAPI, Gemini API, Groq/Llama 3.1, Whisper, JavaScript</div>
+        <ul>
+          <li>Built a Chrome extension to summarize webpages, YouTube videos, and PDFs into flashcards/quizzes.</li>
+          <li>Used Gemini API (Groq/Llama 3.1 fallback) via a FastAPI backend for summaries and quiz generation.</li>
+          <li>Integrated local Whisper to transcribe and summarize lecture audio from Coursera, Udemy, etc.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section">
+      <h2 class="section-title">Achievements</h2>
+      <ul>
+        <li><strong>Sri Eshwar ICPC Finalist</strong> (2025)</li>
+        <li><strong>Code Red 3.0 Finalist</strong> (2025)</li>
+      </ul>
+    </div>
+
+    <!-- Coding Profiles -->
+    <div class="section">
+      <h2 class="section-title">Coding Profiles</h2>
+      <ul>
+        <li><strong>Leetcode:</strong> Global Rank: 1,622,682 | Problems Solved: 103 | <a href="https://leetcode.com/u/el6keC5TtO/" target="_blank">Profile Link</a></li>
+        <li><strong>Skillrack:</strong> Rank: 30010 | Certificates: 8 | Problems Solved: 883 | <a href="https://www.skillrack.com/faces/resume.xhtml?id=514776&key=4be087e205fe5955404530838999275d942d9d83" target="_blank">Profile Link</a></li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <div class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul>
+        <li>SQL (Basics, Intermediate) — HackerRank (2025)</li>
+        <li>Completion of Python Certificate — SpringBoard (2025)</li>
+        <li>Completion of C Programming Certificate — IIT Bombay (2024)</li>
+        <li>Completion of Data Structures Certificate — Udemy (2025)</li>
+      </ul>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skills-label">Languages</div>
+        <div class="skills-val">C, C++ (Intermediate), JavaScript, Java, HTML, CSS, Python (Basics)</div>
+        
+        <div class="skills-label">Frameworks</div>
+        <div class="skills-val">Spring-Boot, NodeJS, ReactJS</div>
+        
+        <div class="skills-label">Database</div>
+        <div class="skills-val">SQL, MongoDB</div>
+        
+        <div class="skills-label">Tools</div>
+        <div class="skills-val">Git, GitHub, Postman</div>
+        
+        <div class="skills-label">Core Concepts</div>
+        <div class="skills-val">DSA (Basics), OOPS (Basics), SQL (Basics)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
