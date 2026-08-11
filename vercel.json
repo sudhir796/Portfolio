@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd sudhir-portfolio && npm run build",
+  "outputDirectory": "sudhir-portfolio/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
