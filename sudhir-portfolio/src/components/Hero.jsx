@@ -34,6 +34,25 @@ function CountUpNumber({ target, decimals = 0 }) {
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion()
+  const [leetcodeCount, setLeetcodeCount] = useState(88)
+
+  // Fetch live LeetCode stats with graceful fallback
+  useEffect(() => {
+    let isMounted = true
+    fetch('/api/leetcode-stats')
+      .then((res) => res.json())
+      .then((data) => {
+        if (isMounted && typeof data?.solved === 'number' && data.solved > 0) {
+          setLeetcodeCount(data.solved)
+        }
+      })
+      .catch(() => {
+        // Fallback silently to static default
+      })
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Motion values for 3D Tilt Card
   const mouseX = useMotionValue(0)
@@ -99,7 +118,7 @@ export default function Hero() {
 
   const stats = [
     { target: 7.865, decimals: 3, label: "CGPA" },
-    { target: 88, decimals: 0, label: "LeetCode Solved" },
+    { target: leetcodeCount, decimals: 0, label: "LeetCode Solved" },
     { target: 883, decimals: 0, label: "Skillrack Solved" },
     { target: 2, decimals: 0, label: "Hackathon Finals" },
   ]
@@ -185,7 +204,7 @@ export default function Hero() {
               className="glass-panel p-4 flex flex-col items-center justify-center border border-glass-border hover:border-cyan/40 hover:shadow-[0_0_15px_rgba(76,240,255,0.15)] transition-all duration-300 group"
             >
               <div className="font-display text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan to-text-primary group-hover:from-cyan group-hover:to-violet transition-all duration-300">
-                <CountUpNumber target={stat.target} decimals={stat.decimals} />
+                <CountUpNumber key={stat.target} target={stat.target} decimals={stat.decimals} />
               </div>
               <div className="font-mono text-[10px] sm:text-xs text-text-dim tracking-wider uppercase mt-1">
                 {stat.label}
