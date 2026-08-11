@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd sudhir-portfolio && npm run build",
+  "installCommand": "npm --prefix sudhir-portfolio install",
+  "buildCommand": "npm --prefix sudhir-portfolio run build",
   "outputDirectory": "sudhir-portfolio/dist",
   "framework": "vite",
   "rewrites": [

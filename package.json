@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-root",
+  "private": true,
+  "scripts": {
+    "install-deps": "npm --prefix sudhir-portfolio install",
+    "build": "npm --prefix sudhir-portfolio run build"
+  }
+}
