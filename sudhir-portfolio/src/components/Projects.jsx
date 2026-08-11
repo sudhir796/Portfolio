@@ -2,6 +2,18 @@ import { motion, useReducedMotion } from 'framer-motion'
 
 const projectsData = [
   {
+    id: 'launchpad-ai',
+    name: 'LaunchPad AI',
+    status: 'IN PROGRESS',
+    accent: 'violet',
+    teamBadge: 'TEAM OF 3 // 36-HR HACKATHON',
+    description:
+      'A 7-agent pipeline that takes a raw startup idea and pushes it through Idea Validation, Patent & Prior Art Search, Market Research, Competitor Analysis, Business Model Generation, Pitch Deck Generation, and Investor Matching — producing an investor-ready pitch end to end. Built in 36 hours with a 3-person team for the AGENTVERSE Grand Challenge 2026. Patent search runs against the real USPTO PatentsView API rather than generic web search, and investor matching is grounded in live web search instead of a static dataset.',
+    stack: ['Python', 'FastAPI', 'Multi-Agent', 'Next.js', 'Gemini', 'Groq'],
+    colSpan: 'col-span-1 md:col-span-2',
+    featured: true,
+  },
+  {
     id: 'faceguard',
     name: 'FaceGuard',
     status: 'LEARNING PROJECT',
@@ -102,7 +114,7 @@ export default function Projects() {
             Systems shipped & under active build.
           </h2>
           <p className="font-mono text-xs text-text-dim max-w-xs">
-            Showing 7 selected architectures across AI/ML, full-stack, and computer vision.
+            Showing 8 selected architectures across AI/ML, multi-agent systems, full-stack, and computer vision.
           </p>
         </div>
       </div>
@@ -135,28 +147,40 @@ export default function Projects() {
                   : 'hover:border-violet/50 hover:shadow-[0_0_25px_rgba(139,92,246,0.18)]'
               }`}
             >
-              {/* Top Row: Name and Status Badge */}
+              {/* Top Row: Name and Status Badges */}
               <div className="space-y-4">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-wrap items-start justify-between gap-3">
                   <h3 className="font-display text-xl sm:text-2xl font-bold text-text-primary group-hover:text-cyan transition-colors duration-300">
                     {project.name}
                   </h3>
 
-                  {/* Status Pill */}
-                  <span
-                    className={`font-mono text-[10px] sm:text-xs font-semibold px-3 py-1 rounded-full border whitespace-nowrap flex items-center gap-1.5 ${
-                      isCyan
-                        ? 'bg-cyan/10 border-cyan/30 text-cyan shadow-[0_0_10px_rgba(76,240,255,0.2)]'
-                        : 'bg-violet/10 border-violet/30 text-violet shadow-[0_0_10px_rgba(139,92,246,0.2)]'
-                    }`}
-                  >
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {/* Optional Team Badge */}
+                    {project.teamBadge && (
+                      <span className="font-mono text-[10px] text-text-dim bg-white/5 border border-glass-border px-2.5 py-1 rounded-full flex items-center gap-1 tracking-wider">
+                        <svg className="w-3 h-3 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        {project.teamBadge}
+                      </span>
+                    )}
+
+                    {/* Status Pill */}
                     <span
-                      className={`w-1.5 h-1.5 rounded-full ${
-                        isCyan ? 'bg-cyan animate-pulse' : 'bg-violet animate-pulse'
+                      className={`font-mono text-[10px] sm:text-xs font-semibold px-3 py-1 rounded-full border whitespace-nowrap flex items-center gap-1.5 ${
+                        isCyan
+                          ? 'bg-cyan/10 border-cyan/30 text-cyan shadow-[0_0_10px_rgba(76,240,255,0.2)]'
+                          : 'bg-violet/10 border-violet/30 text-violet shadow-[0_0_10px_rgba(139,92,246,0.2)]'
                       }`}
-                    />
-                    {project.status}
-                  </span>
+                    >
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full ${
+                          isCyan ? 'bg-cyan animate-pulse' : 'bg-violet animate-pulse'
+                        }`}
+                      />
+                      {project.status}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Description */}
